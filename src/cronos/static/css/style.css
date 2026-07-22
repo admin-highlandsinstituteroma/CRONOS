@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    background: #f5f6f8;
+    color: #1f2937;
+}
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: #1e3a8a;
+    color: white;
+    padding: 30px 20px;
+}
+
+.sidebar .logo {
+    margin-bottom: 40px;
+}
+
+.sidebar h2 {
+    font-size: 28px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.topbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title h1 {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.page-title p {
+    color: #6b7280;
+}
+
+.status {
+    font-weight: 600;
+}
+
+main {
+    padding: 32px;
+}
+
+section {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-right: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section-header p {
+    color: #6b7280;
+}
+
+.workflow {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.workflow-step {
+    flex: 1;
+    min-width: 0;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.workflow-step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.workflow-icon {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.workflow-step strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.workflow-step small {
+    display: block;
+    color: #6b7280;
+    line-height: 1.35;
+}
+
+.workflow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    font-size: 26px;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+    .workflow {
+        flex-wrap: wrap;
+    }
+
+    .workflow-step {
+        flex: 1 1 220px;
+    }
+
+    .workflow-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}

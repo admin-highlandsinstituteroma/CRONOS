@@ -1,0 +1,72 @@
+{% extends "layout/base.html" %}
+
+{% block title %}
+CRONOS Dashboard
+{% endblock %}
+
+{% block content %}
+
+{% include "components/workflow.html" %}
+
+<section class="kpi-section">
+
+    <div class="section-header">
+        <div>
+            <h2>Quadro operativo</h2>
+            <p>Stato sintetico della pianificazione istituzionale</p>
+        </div>
+    </div>
+
+    <div class="kpi-grid">
+
+        <article class="kpi-card">
+            <span class="kpi-icon">📝</span>
+            <div>
+                <strong>Eventi in bozza</strong>
+                <span class="kpi-value">0</span>
+            </div>
+        </article>
+
+        <article class="kpi-card">
+            <span class="kpi-icon">✅</span>
+            <div>
+                <strong>Eventi approvati</strong>
+                <span class="kpi-value">0</span>
+            </div>
+        </article>
+
+        <article class="kpi-card">
+            <span class="kpi-icon">🏢</span>
+            <div>
+                <strong>Sale occupate</strong>
+                <span class="kpi-value">0</span>
+            </div>
+        </article>
+
+        <article class="kpi-card">
+            <span class="kpi-icon">⚠️</span>
+            <div>
+                <strong>Conflitti rilevati</strong>
+                <span class="kpi-value">0</span>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Calendari</h2>
+
+    <p>📅 Pianificazione Bozze</p>
+    <p>📅 Pianificazione</p>
+
+    <button>Visualizza</button>
+    <button>PDF Verifica</button>
+    <button>Approva</button>
+    <button>PDF Protocollo</button>
+
+</section>
+
+{% endblock %}
