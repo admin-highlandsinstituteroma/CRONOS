@@ -1,0 +1,14 @@
+[project]
+name = "cronos"
+version = "0.1.0"
+description = "Calendar & Resource Orchestration Network Operating System"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "jinja2",
+    "weasyprint",
+    "pydantic",
+]
