@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from cronos.api.routes.system import router as system_router
 
 app = FastAPI(
     title="CRONOS",
@@ -6,16 +7,11 @@ app = FastAPI(
     version="0.1.0"
 )
 
+app.include_router(system_router)
+
 @app.get("/")
 async def root():
     return {
         "service": "CRONOS",
-        "status": "online",
-        "version": "0.1.0"
-    }
-
-@app.get("/health")
-async def health():
-    return {
-        "status": "ok"
+        "status": "online"
     }
